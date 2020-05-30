@@ -2,7 +2,7 @@ void game() {
   background(green);
 
   
-  //FOUNDATIONS
+  //FOUNDATIONS (GAME ENGINE)
   int i = 0;
   while (i < objects.size()) {
     GameObject obj = objects.get(i);
@@ -15,6 +15,11 @@ void game() {
     }
   }
   
+  
+  //ENEMY SPAWN
+  if (frameCount % 60 == 0) {
+  objects.add(new enemy());
+  }
 }
 
 void gameClicks() {
