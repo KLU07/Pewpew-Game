@@ -32,7 +32,7 @@ class player extends GameObject {
 //=========================================================    
     void shoot() {
       if (mousePressed) {
-        objects.add(new bullet());
+        objects.add(new bullet(x,y,5, 1, pink));
       }
     }
 }

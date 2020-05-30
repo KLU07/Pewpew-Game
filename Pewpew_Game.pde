@@ -9,11 +9,12 @@ color green = #A6D32A;
 color yellow = #FFC83D;
 color brown = #5B4745;
 
+color purple = #D87FD3;
 color white = #FFFFFF;
 color black = #000000;
 
 //MODE FRAMEWORK VARIABLES
-final int INTRO    = 0;
+final int INTRO    = 0; 
 final int GAME     = 1;
 final int PAUSE    = 2;
 final int GAMEOVER = 3;
@@ -44,6 +45,12 @@ void setup() {
   objects = new ArrayList<GameObject>();
   myPlayer = new player();
   objects.add(myPlayer);
+  
+  int i = 0;
+  while (i < 100) {
+    objects.add(new obstacle());
+    i = i + 1;
+  }
 
 }
 
